@@ -13,7 +13,7 @@ var (
 )
 
 func init() {
-	flag.StringVar(&accessToken, "access-token", "nothing", "Telegram access token")
+	flag.StringVar(&accessToken, "access-token", "", "Telegram access token")
 }
 
 func main() {
