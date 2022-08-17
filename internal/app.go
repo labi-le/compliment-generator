@@ -34,10 +34,7 @@ func NewApp(accessToken string, logLevel logrus.Level, lp *telebot.LongPoller) *
 
 }
 
-func (a *App) Run() error {
+func (a *App) Run() {
 	AddHandlers(a.Bot, a.Logger)
-
 	a.Bot.Start()
-
-	return nil
 }
