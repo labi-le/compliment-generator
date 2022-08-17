@@ -88,6 +88,7 @@ func (d *Daemon) RunDaemon() {
 
 			go task(t, d.Logger)
 		}
+		time.Sleep(1 * time.Second)
 	}
 }
 
