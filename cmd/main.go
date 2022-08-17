@@ -5,6 +5,7 @@ import (
 	"github.com/sirupsen/logrus"
 	tele "gopkg.in/telebot.v3"
 	"test/internal"
+	"test/internal/daemon"
 	"time"
 )
 
@@ -31,7 +32,7 @@ func main() {
 	)
 
 	go func() {
-		internal.NewComplimentsDaemon(app.Bot, app.Logger).RunDaemon()
+		daemon.NewDaemon(app.Logger).RunDaemon()
 	}()
 
 	app.Run()
